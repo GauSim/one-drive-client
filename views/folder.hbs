@@ -1,0 +1,43 @@
+
+<table class="table">
+  <thead>
+    <tr>
+      <td></td>
+      <td></td>
+      <td>childCount</td>
+      <td>size</td>
+    </tr>
+  </thead>
+  {{#each items}}
+  <tr>
+    <td>
+      {{#if folder}}
+      <i class="fa fa-folder" aria-hidden="true"></i>
+      <a href="/browse/{{../driveId}}/{{id}}">
+        {{name}}
+      </a>
+      {{/if}} {{#if file}}
+      <i class="fa fa-file" aria-hidden="true"></i>
+      <a href="{{downloadUrl}}" target="_blank">
+        {{name}}
+      </a>
+      {{/if}}
+
+    </td>
+    <td>
+      {{#if thumbnail}}
+      <a href="{{downloadUrl}}">downloadUrl</a>
+      {{/if}}
+    </td>
+    <td>{{folder.childCount}}</td>
+    <td>
+      {{size}}
+    </td>
+  </tr>
+
+
+  {{/each}}
+</table>
+
+
+<div>count: {{ items.length}} </div>

@@ -1,0 +1,10 @@
+#!/usr/bin/env node
+
+/**
+ * Module dependencies.
+ */
+
+const app = require('../release/app');
+const http = require('http');
+const server = require('../release/Server').default;
+server.start();
